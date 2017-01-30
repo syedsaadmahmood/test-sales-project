@@ -17,8 +17,18 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+  models: {
+    connection: 'localMongoDb',
+
+   /***************************************************************************
+   *                                                                          *
+   * How and whether Sails will attempt to automatically rebuild the          *
+   * tables/collections/etc. in your schema.                                  *
+   *                                                                          *
+   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
+   *                                                                          *
+   ***************************************************************************/
+    migrate: 'alter'
+  }
 
 };
