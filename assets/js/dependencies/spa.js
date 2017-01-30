@@ -1,5 +1,5 @@
-angular.module('Platzi', []);
-angular.module('Platzi').controller('BaseCtrl', [ '$scope', function($scope) {
+(function () {
+angular.module('Platzi', []).controller('BaseCtrl',['$scope', function($scope) {
 
   io.socket.get('/emoji', function (data) {
     $scope.emojis = data;
@@ -15,8 +15,8 @@ angular.module('Platzi').controller('BaseCtrl', [ '$scope', function($scope) {
     }
   });
 
-
 }]);
+}());
 
 
   /*$scope.emojis = [{
@@ -31,4 +31,3 @@ angular.module('Platzi').controller('BaseCtrl', [ '$scope', function($scope) {
       id:3,
       text: ':('
     }];*/
-
